@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/multimodelchat/api")
 public class MultiModelChatController {
 
-    private static final Logger log = LoggerFactory.getLogger(OpenAIChatController.class);
+    private static final Logger log = LoggerFactory.getLogger(MultiModelChatController.class);
 
     @Autowired
     private OllamaMultiModelService ollamaMultiModelService;
