@@ -19,7 +19,7 @@ public class ChatClientConfig {
     @Qualifier("customGPTClient")
     public ChatClient customGPTClient(OpenAiChatModel chatModel) {
         return ChatClient.builder(chatModel)
-                .defaultSystem("You are a helpful AI assistant powered by Llama2")
+                .defaultSystem("You are a helpful AI assistant powered by GPT 5.2")
                 .defaultOptions(ChatOptions.builder().model("gpt-5.2").build())
                 .build();
     }
