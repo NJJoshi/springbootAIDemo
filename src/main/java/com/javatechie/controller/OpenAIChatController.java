@@ -32,8 +32,6 @@ public class OpenAIChatController {
     @GetMapping("/chat/{model}")
     public String chat(@RequestParam String message, @PathVariable String model) {
         log.info("Received request to chat with model {}", model);
-        return  ollamaMultiModelService.getChatClient(model).prompt(message)
-                .call()
-                .content();
+        return  openAIChatService.chatWithSpecificModel(model,message);
     }
 }
